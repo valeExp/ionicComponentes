@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Search Bar</ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar animated
+   (ionChange)="buscar($event)"></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-reorder-group disabled="false"
+                       (ionItemReorder)="reorder($event)" >
+  
+     <ion-item *ngFor="let a of albums | filtro: textoVacio: 'title'" >
+        <ion-label>{{a.title}}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+     </ion-item>
+     
+    </ion-reorder-group>  
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<app-header title="Progress Bar"></app-header>
+
+<ion-content>
+    <ion-progress-bar [value]="porcentaje"></ion-progress-bar>
+
+    <ion-list>
+        <ion-item>
+            <ion-range min="1" max="100"
+                   (ionChange)="cambioRango( $event )" 
+                   pin="true"
+                   color="secondary">
+
+                <ion-label slot="start">1</ion-label>   
+                <ion-label slot="end">100</ion-label>   
+            </ion-range>            
+        </ion-item>
+    </ion-list>
+
+</ion-content>
