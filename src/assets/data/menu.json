@@ -61,5 +61,9 @@
       "path":"/segment" },
     { "name":"Slides",
       "icon":"albums",
-      "path":"/slides" }            
+      "path":"/slides" },
+    { "name":"Tags",
+      "icon":"settings",
+      "path":"/tabs/account",
+      "redirectTo":"/tabs/account" }             
   ]
